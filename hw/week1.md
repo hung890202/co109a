@@ -148,3 +148,4 @@ CHIP DMux {
     And(a=in,b=sel,out=b);
 }
 </code></pre>
+<img src="picture/S__233947138.jpg">
