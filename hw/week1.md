@@ -148,8 +148,3 @@ CHIP DMux {
     And(a=in,b=sel,out=b);
 }
 </code></pre>
-<<<<<<< HEAD
-=======
-![picture](picture/S__233947138.jpg)
-![picture](S__233947140.jpg)
->>>>>>> e9f213b5bc33dec5333caf1f804a0effaee3abab
