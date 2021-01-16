@@ -40,4 +40,35 @@ CHIP CPU {
 
     PARTS:
     // Put your code here:
+    //把instruction分成16個，方便書寫程式
+    Or16(a=false, b=instruction, out[15]=isC, out[12]=a, out[11]=c1, out[10]=c2, out[9]=c3, out[8]=c4, out[7]=c5, out[6]=c6, out[5]=d1, out[4]=d2, out[3]=d3, out[2]=j1, out[1]=j2, out[0]=j3);
+    Mux16(a=instruction, b=aluOut, sel=isC, out=CorA);
+
+    //Aregister-c
+    And(a=d1, b=isC, out=Cd1);
+    Not(in=isC, out=NC);
+    Or(a=NC, b=Cd1, out=loadA);
+    ARegister(in=CorA, load=loadA, out=A, out[0..14]=addressM);
+
+    Mux16(a=A, b=inM, sel=a, out=AorM);
+
+    //Dregister-c
+    And(a=isC, b=d2, out=loadD);
+    DRegister(in=aluOut, load=loadD, out=D);
+
+    ALU(x=D, y=AorM, zx=c1, nx=c2, zy=c3, ny=c4, f=c5, no=c6, out=outM, out=aluOut, zr=zr, ng=ng);
+    
+    //writeM-c
+    And(a=isC, b=d3, out=writeM);
+
+    //PC-c
+    Or(a=zr, b=ng, out=ZRorNG); //is input zero or negative
+    Not(in=ZRorNG, out=GT); //input is not zero and negative (greater than)
+    And(a=GT, b=j3, out=JGT);
+    And(a=zr, b=j2, out=JEQ);
+    Or(a=JEQ, b=JGT, out=JGE);
+    And(a=ng, b=j1, out=JLT);
+    Or(a=JLT, b=JGE, out=Pass);
+    And(a=isC, b=Pass, out=forPC);
+    PC(in=A, load=forPC, inc=true, reset=reset, out[0..14]=pc);
 }
