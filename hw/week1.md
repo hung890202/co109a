@@ -20,7 +20,7 @@ CHIP Not {
   // Put your code here:
   Nand(a=in, b=in, out=out);
 }
-<pre><code>
+
 ## 2.and
 code
 <pre><code>
