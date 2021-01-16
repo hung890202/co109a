@@ -148,6 +148,6 @@ CHIP DMux {
     And(a=in,b=sel,out=b);
 }
 </code></pre>
-![picture](./co109a/co109a/picture/S__233947138.jpg)
-![picture](S__233947140.jpg)
 
+<img src="picture/S__233947138.jpg" width="1000" height="600"   /> 
+<img src="picture/S__233947140.jpg" width="1000" height="600"   /> 

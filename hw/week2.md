@@ -301,4 +301,6 @@ CHIP DMux8Way {
 ## 10.迪摩根二式
 證明於附圖3中
 ## picture
-![picture1](./co109a/co109a/picture/S__233947141.jpg)
+![picture1](picture/S__233947141.jpg)
+![picture1](picture/S__233947142.jpg)
+![picture1](picture/S__233947143.jpg)
