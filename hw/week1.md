@@ -149,4 +149,4 @@ CHIP DMux {
 }
 </code></pre>
 ![picture](https://github.com/hung890202/co109a/blob/master/picture/S__233947138.jpg)
-![picture](https://github.com/hung890202/co109a/blob/master/picture/S__233947141.jpg)
+![picture](https://github.com/hung890202/co109a/blob/master/picture/S__233947140.jpg)

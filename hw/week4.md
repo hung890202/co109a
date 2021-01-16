@@ -109,5 +109,6 @@ CHIP Inc16 {
 }
 </code></pre>
 ## picture
-![picture1](picture/S__233947145.jpg)
-![picture2](picture/S__112582689.jpg)
+![picture](https://github.com/hung890202/co109a/blob/master/picture/S__233947145.jpg)
+![picture](https://github.com/hung890202/co109a/blob/master/picture/S__112582689.jpg)
+S__112582689
